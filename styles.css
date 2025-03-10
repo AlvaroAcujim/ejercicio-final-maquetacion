@@ -1,0 +1,762 @@
+/*--- General styles ---*/
+@font-face {
+    font-family: LibreBaskerville;
+    src: url(./fonts/LibreBaskerville-Regular.ttf);
+    font-weight: 100;
+}
+
+.body{
+    
+}
+.page__container{
+    position: relative;
+    min-width: 300px;
+    background-image:  url('./images/syndraBg.jpeg'); /* https://imageresizer.com/resize/download/67b3811774bf6ba8dbe97d9b para escalar la imagen 800x1777 images: https://alphacoders.com/league-of-legends-phone-wallpapers ref: https://es.pinterest.com/pin/3166662230362635/*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: LibreBaskerville;
+    box-sizing: border-box;
+    min-height: 100vh;
+    
+}
+.page__container::after{
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.801);
+    margin: 0px;
+    min-width: 100%;
+}
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    color:inherit;
+}
+/*--- General styles End ---*/
+
+/*--- Header Styles ---*/
+
+.header__container{
+    z-index: 10;
+    position: relative;
+    width: 100dvw;
+    height: 10dvh;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.header__container__nav{
+    width: 100%;
+    
+}
+.header__container__ul{
+    left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: left;
+    list-style: none;
+    padding: 0px;
+   
+}
+.header__container__ul__item:first-child{
+    color:rgb(255, 67, 67);
+    font-size: 1.4rem;
+}
+
+.header__container__ul__item{
+    margin: 0px;
+    font-size: 1.2rem;
+    padding: 10px;
+   
+}
+.header__container__ul__item:first-child:hover{
+    font-size: 1.6rem;
+    color: #9f8f3f;
+}
+.header__container__ul__item:hover{
+    font-size: 1.4rem;
+    color: #9f8f3f;
+    filter: drop-shadow(0px 0px 2px rgb(0, 0, 0));
+}
+
+/*--- Header Styles End ---*/
+
+/* --- Header Queries --- */
+@media screen and (min-width: 600px){
+    .header__container{
+        justify-content: left;
+    }
+    .header__container__nav{
+        width: 50%
+    }
+    .page__container::after{
+        min-width: 100%;
+    }
+}
+/* --- Header Queries End--- */
+
+/* --- Header Ends --- */
+
+/*--- Main Index Styles----*/
+
+.main__container{
+    z-index: 10;
+    min-height: 100vh;
+    position: relative;
+   
+}
+.main__container__title{
+    position: relative;
+    color: #fff;
+    z-index: 10;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+.content__container{
+    position: relative;
+    z-index: 10;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box
+    
+}
+.content__container__item--image{
+    margin-top: 70px;
+    min-width: 50dvw;
+    min-height: 30dvh;
+    background-color: #f92d2d6c;
+}
+.varus{
+    background-color:#d727ff27;
+}
+.kayn{
+    padding-bottom: 40px;
+}
+.aatrox{
+    padding-bottom: 20px;
+}
+
+
+.content__container__item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70dvw;
+    height: 90dvh;
+    background-color: #a2a2a22d;
+    border: solid #ffffff88 2px;
+    border-radius: 2%;
+}
+.content__container__item--image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__container__item--image__picture img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255)) drop-shadow(0px 0px 5px rgb(252, 252, 8));
+    box-sizing: border-box 
+}
+
+.content__container__item__title_container{
+    border: 2px black;
+}
+.content__container__item__title{
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffe45e;
+    margin: 10px 0px 5px 0px;
+}
+.content__container__item__subtitle{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    color: #9f8f3f;
+    margin: 10px 0px 15px 0px;
+    font-style: italic;
+}
+.content__container__item__text{
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.1rem;
+    overflow: auto;
+    padding: 0px 10px 0px 10px;
+}
+.content__container__item__icons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.content__container__item__icons > img{
+    border: solid 3px black;
+}
+.audios{
+    color: red;
+}
+
+/*--- Main Index Styles End----*/
+
+/* --- Main Index Media --- */
+@media screen and (min-width: 800px){
+    .content__container{
+        width: 100dvw;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .content__container__item--image{
+        width: 70dvw;
+        height: 60dvh;
+        border: solid #ffffff88 2px;
+        border-radius: 2%;
+        box-sizing: border-box 
+    }
+    .main__container__title{
+        margin-bottom: 30px;
+    }
+    
+}
+@media screen and (min-width:300px)and (min-height:500px){
+    .content__container__item--image{
+        padding: 55px;
+    }
+   
+
+}
+@media screen and (max-height:500px){
+    .content__container__item{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*--- Main Index Ends----*/
+
+/* --- Main Contact Styles --- */
+
+.main__container__form{
+    position: relative;
+    min-width: 98%;
+    height: 96vh;
+    background: #363636;
+    overflow: hidden;
+    z-index: 10;
+    padding: 0.2% 0.2% 0.2% 0.2%;
+    border: 1px;
+    border-color:#363636;
+    border-radius: 20px;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: border-box;
+  }
+ 
+  .main__container__form::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 98%;
+    height: 100%;
+    background: linear-gradient(0deg,transparent, transparent, #b42e2e,#fce446,#b42e2e);
+    z-index: 20;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    overflow: hidden;
+  }
+
+  .main__container__form::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 98%;
+    height: 100%;
+    background: linear-gradient(0deg,transparent, transparent, #b42e2e,#fce446,#b42e2e);
+    z-index: 20;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    overflow: hidden;
+    animation-delay: -8.7s;
+  }
+ 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main__container__form__panel{
+    min-width: 99%;
+    height: 99%;
+    background-image: url(./images/lolbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    z-index: 30;
+  }
+
+  .main__container__form__panel__user{
+    min-width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.544);
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main__container__form__panel__user > h3 {
+      color: #fff; 
+      font-size: 1.9rem; 
+      text-align: center;
+  }
+
+  .main__container__form__panel__user__inputs{
+    min-width: 70dvw;
+    height: 25dvh;
+    background-color: rgba(0, 0, 0, 0.771);
+    z-index: 50;
+    color: #9f8f3f;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .main__container__form__panel__user__inputs > label, input{
+    min-width: 20%;
+    margin-bottom: 10px;
+  }
+
+  .main__container__form__panel__user__inputs > input{
+    background-color: black;
+    color: #fff;
+    border-radius: 1%;
+  }
+
+  .main__container__form__panel__user__inputs > input[type='submit']{
+    color: #9f8f3f;
+    padding: 8px;
+    border: solid #9f8f3f 2px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .main__container__form__panel__user__inputs > input[type='submit']:hover{
+    color: #f92d2d6c;
+    border: solid #f92d2d6c 2px;
+    font-weight: 700;
+  }
+
+ .submit{
+    padding: 0px;
+    margin: 0px;
+    height: 10dvh;
+  }
+
+/* --- Main Contact Styles End--- */
+
+  /* --- Main Contact Animations --- */
+  @keyframes animate{
+    0%
+    {
+      transform: rotate(0deg);
+    }
+    100%
+    {
+      transform: rotate(360deg);
+    }
+  }
+  /* --- Main Contact Animations End--- */
+
+  /* --- Main Contact Media --- */
+  @media screen and (min-width:1000px){
+    .main__container__form__panel__user > h3 {
+        font-size: 2.5rem;
+    }
+
+    .main__container__form__panel__user__inputs{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .main__container__form__panel__user__inputs > input{
+        margin-right: 10px;
+        width: 50%;
+    }
+
+    .main__container__form__panel__user__inputs > label{
+        font-size: 1.5rem;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .submit{
+        height: 20%;
+    }
+   
+  }
+  @media screen and (min-height:200px) and (max-height: 740px){
+    .main__container__form__panel__user__inputs{
+        text-align: center;
+        min-height: 30vh;
+        max-height: 40vh;
+    }
+    .submit{
+        min-height: 10vh;
+        max-height: 20vh;
+    }
+
+    .main__container__form__panel{
+        min-height: 90vh;
+    }
+
+    .main__container__form{
+        
+        min-height: 700px;
+    }
+   
+    
+    
+  }
+  @media screen and (min-width:600px) and (max-height: 400px){
+    .main__container__form__panel__user__inputs{
+        text-align: center;
+        min-height: 50vh;
+    }
+
+    .main__container__form__panel{
+        min-height: 30vh;
+    }
+
+    .main__container__form{
+        min-height: 700px;
+    }
+    
+  }
+
+/* --- Main Contant Media End --- */
+
+/* --- Main Stat Styles --- */
+
+.main__container__grid{
+    position: relative;
+    min-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows:  minmax(250px, 1fr)  minmax(250px, 1fr)  minmax(250px, 1fr);
+    grid-template-columns: 100%;
+    gap: 8px;
+    z-index: 20;
+    box-sizing: border-box;
+    
+}
+/* --- Main Stat End --- */
+/* --- champStats section --- */
+
+
+.main__container__grid__champStats{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #9f8f3f;
+    border-radius: 3%;
+    z-index: 20;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__container__grid__champStats__icons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main__container__grid__champStats__icons > img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #9f8f3f;
+    border-radius: 50%;
+}
+
+.main__container__grid__champStats__abilitiesCounters{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 100%;
+
+}
+
+.main__container__grid__champStats__abilitiesCounters__icon{
+    text-align: center;
+}
+
+.main__container__grid__champStats__abilitiesCounters__icon > img{
+    border: 2px solid #9f8f3f;
+}
+.main__container__grid__champStats__abilitiesCounters__abilities{
+    color: white;
+    text-align: center;
+}
+
+.main__container__grid__champStats__abilitiesCounters__counters{
+    color: white;
+    text-align: center;
+}
+
+.main__container__grid__champStats__icons__counters > img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #9f8f3f;
+    border-radius: 50%;
+}
+
+.main__container__grid__champStats__role{
+    width: 90%;
+    height: 100%;
+    border: 2px solid #8f8f8f;
+    color: white;
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.main__container__grid__champStats__role__item{
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid  #9f8f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__container__grid__champStats__role__item:first-child{
+    border: none;
+    font-size: 1.3rem;
+}
+
+.main__container__grid__champStats__role__item > h3{
+    font-size: 1.5rem;
+    color: #9f8f3f;
+}
+
+.main__container__grid__champStats__role__item > p{
+    font-size: 0.8rem;
+    color: #8f8f8f;
+}
+
+/* --- champStats section End--- */
+
+/* --- popularPlayer section --- */
+.main__container__grid__popularPlayer{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #9f8f3f;
+    background-color: black;
+    border-radius: 3%;
+    z-index: 20;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main__container__grid__popularPlayer__games__grid{
+    height: 100%;
+    display: grid;
+    text-align: center;
+    width: 100dvw;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 50%r);
+}
+
+.main__container__grid__popularPlayer__games__grid > h3{
+    font-size: small;
+}
+
+.main__container__grid__popularPlayer__games__played__item{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.main__container__grid__popularPlayer__games__grid__item > img {
+    width: 50px;
+    height: 50px;
+}
+
+.main__container__grid__popularPlayer__games__grid__item__bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container__grid__popularPlayer__games__grid__item__bar > p{
+    padding-left: 10px;
+}
+
+.main__container__grid__popularPlayer__games__grid__item__gamesBarWins{
+    width: 200px;
+    height: 20%;
+    background-color: rgb(106, 115, 247);
+}
+
+.main__container__grid__popularPlayer__games__grid__item__gamesBarTotals{
+    width: 20px;
+    height: 20%;
+    background-color: gray;
+}
+
+/* --- popularPlayer section End--- */
+
+/* --- popularPlayer media --- */
+@media screen and (min-width:400px) {
+    .main__container__grid__popularPlayer__games__grid{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 2fr);
+    }
+
+    .page__container{
+        background-color: black;
+    }
+}
+@media screen and (min-width:1400px) {
+    .main__container__grid{
+        grid-template-rows: minmax(1000px, 1fr) minmax(1000px, 1fr);
+        grid-template-columns: 70% 30%;
+    }
+
+    .main__container__grid__popularPlayer{
+        justify-content: center;
+
+    }
+
+    .main__container__grid__champBuilds{
+        grid-column: 1/2;
+    }
+
+    .main__container__grid__popularPlayer__games__grid{
+        width: 90%;
+    }
+
+    .section__champBuilds{
+        grid-column: 2 span;
+    }
+}
+/* --- popularPlayer End --- */
+
+/* --- champBuilds section --- */
+
+.main__container__grid__champBuilds{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #9f8f3f;
+    border-radius: 3%;
+    z-index: 20;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main__container__grid__champBuilds__itemsOrder__images > img {
+    width: 50px;
+    height: 50px;
+}
+
+.main__container__grid__champBuilds__itemsOrder__runes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.main__container__grid__champBuilds__itemsOrder__runes__image > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Footer Styles --- */
+.footer__container__info{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 15dvh;
+    background-color: #080808a2;;
+    z-index: 10;
+    color: #9f8f3f;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px, 0px, 50px, 0px;
+    bottom: 0px;
+}
+
+.footer__container__info__item{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px, 0px, 15px, 0px;
+    margin: 15px, 0px, 15px, 0px;
+}
+
+/* --- Footer Medias --- */
+
+@media screen and (min-height: 200px) and (max-height:500px){
+    .footer__container__info{
+        height: 30dvh;
+    }
+}
+/* --- Footer Ends --- */
+
