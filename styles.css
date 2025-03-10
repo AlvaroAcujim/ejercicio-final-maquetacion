@@ -79,6 +79,7 @@ a{
     margin: 0px;
     font-size: 1.2rem;
     padding: 10px;
+    transition: color 0.8s ease;
    
 }
 .header__container__ul__item:first-child:hover{
@@ -514,6 +515,12 @@ a{
     object-fit: cover;
     border: 2px solid #9f8f3f;
     border-radius: 50%;
+    transition: transform 0.7s ease;
+    cursor: pointer;
+}
+.main__container__grid__champStats__icons > img:hover{
+    border: 2px solid #9f3f3f;
+    transform: scale(1.1);
 }
 
 .main__container__grid__champStats__abilitiesCounters{
@@ -759,4 +766,3 @@ a{
     }
 }
 /* --- Footer Ends --- */
-
